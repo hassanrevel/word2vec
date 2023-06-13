@@ -1,0 +1,25 @@
+data:
+  path:
+    "data/attack_annotated_comments.tsv"
+
+hyperparameters:
+  {
+    'epochs': 5,
+    'min_count': 5,
+    'workers': 3,
+    'sg': 0, # skip-gram or CBOW
+    'sample': 0.001,
+    'size': 100,
+    'window': 5,
+    'hs': 0, # hierarchical softmax or negative sampling
+    'negative': 5,
+    'ns_exponent': 0.75,
+  }
+
+model:
+  save_dir:
+    "models/wiki_attack_ep5.model"
+
+results:
+  plot_save_dir:
+    "results/wiki_attack_ep5_learning_curve.png"
